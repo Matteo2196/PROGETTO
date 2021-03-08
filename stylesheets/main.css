@@ -1,0 +1,40 @@
+body{
+	font-family: Arial;
+	font-weight: bold;
+}
+h1{
+	font-family: times new roman;
+	text-align: center;
+	margin: 0;
+	background-color: #99ccff;
+	color: white;
+}
+
+h2{
+	background-color: red;
+	text-align: center;
+	color: white;
+}
+
+a{
+	color: white;
+	text-decoration: none;
+}
+
+header{
+	background-color: #99ccff;
+	text-align: center;
+}
+
+#nav{
+	list-style-type: none;
+}
+
+#nav li{
+	display: inline-block;
+	}
+
+#nav li:hover{
+	background-color: #d4ffff;
+
+}
