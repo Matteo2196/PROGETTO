@@ -1,40 +1,244 @@
-body{
-	font-family: Arial;
-	font-weight: bold;
+/***************GENERAL**********/
+
+*{
+	box-sizing: border-box;
 }
+
+body{
+	font-family:"Akaya Telivigala", cursive;
+	font-weight: bold;
+	margin: 0 auto;
+}
+
 h1{
-	font-family: times new roman;
-	text-align: center;
-	margin: 0;
+	padding: 5px 5px 5px 5px;
 	background-color: #99ccff;
+	text-align: center;
 	color: white;
 }
 
-h2{
-	background-color: red;
-	text-align: center;
-	color: white;
+h1:hover{
+	background-color: #f0f0f0;
 }
 
 a{
-	color: white;
+	color: black;
 	text-decoration: none;
+	font-size: 20px;
 }
+
+.container{
+	max-width: 500px; 
+	margin: 0 auto ;
+}
+
+#nav {
+	text-align: center;
+	list-style-type: none;
+	background-color: #f0f0f0;
+	font-size: 20px;
+
+}
+
+.active{
+	border-radius: 5px;
+}
+
+main{
+	padding-top: 100px;
+	min-height: calc(100vh - 116px - 160px)
+
+}
+
+/***************HEADER************/
 
 header{
-	background-color: #99ccff;
+	background-color: #42f5b6;
 	text-align: center;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 1;
 }
 
-#nav{
+.logo-container{
+	padding: 10px;
+}
+
+/**************ABOUT************/
+
+#about img{
+	width: 100%;
+	border-radius: 100%;
+}
+
+#about ol{
 	list-style-type: none;
 }
 
-#nav li{
+.clearfix::after{
+	content:"";
+	clear: both;
+	display: table;
+}
+
+/**************CONTATTI******************/
+
+#contatti ul{
+	list-style-type: none;
+}
+
+#contatti li{
+	padding: 15px;
+}
+
+
+/***************MENU DI NAVIGAZIONE**********/
+nav{
+	list-style-type: none;
+	background-color: #42f5b6;
+	margin: 0;
+}
+
+nav li{
 	display: inline-block;
+	padding: 5px 10px;
+}
+
+nav ul{
+	margin: 0;
+}
+
+
+/******************GALLERY******************/
+
+#gallery .item{
+	width: 100%;
+	position: relative;
+}
+
+#gallery img{
+	width: 100%;
+}
+
+#gallery .caption{
+	background: #f0f0f0;
+}
+
+#gallery .caption img{
+	width: 40px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+/*****************FOOTER****************/
+
+footer.main{
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+}
+
+footer.main img{
+	width: 70px;
+	padding: 10px 10px;
+}
+
+footer.main p{
+	font-size: 20px;
+}
+
+
+
+
+
+
+
+@media only screen and (min-width: 768px) {
+
+	header{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	
+
+	
+/*******************ABOUT*****************/
+
+	#about img{
+		width: 60%;
+		float: left;
+	}
+	
+	#about ol{
+		width: 40%;
+		float: right;
+		background-color: #f0f0f0;
+	}
+/*******************CONTATTI*****************/
+
+	#contatti p{
+		width: 50%;
+		float: left;
+		padding: 20px;
 	}
 
-#nav li:hover{
-	background-color: #d4ffff;
+	#contatti ul{
+		width: 50%;
+		float: right;
+		padding: 20px;
+	}
+
+	.material-icons{
+		float: left;
+	}
+
+	.material-icons ul{
+		margin: 10px 10px 10px 10px;
+		display: inline-block;
+	}
+
+	
+}
+
+@media only screen and (min-width: 900px) {
+	
+
+	h1{
+		transition: background-color 3s;
+		transition: color 4s;
+	}
+
+	h1:hover{
+		color: black;
+	}
+
+	nav{
+		transition: background-color 3s;
+	}
+
+	nav li{
+		transition: background-color 1s;
+	}
+
+	nav li:hover{
+		background-color: #99ccff;
+		border-radius: 5px;
+	}
+
+}
+
+@media only screen and (max-width: 768px) {
+
+
+	.container{
+		padding: 10px;
+	}
+
+	nav{
+		background-color: blue;
+	}
 
 }
